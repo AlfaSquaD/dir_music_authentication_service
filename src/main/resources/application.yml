@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: docker
+  datasource:
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/auth
+  jpa:
+    hibernate:
+      ddl-auto: update
+  security:
+    user:
+      password: sa
+      name: sa
+
+authentication-service:
+  jwtAccessTokenSecret: 'secret'
+  jwtRefreshTokenSecret: 'secret2'
+  jwtIssuer: 'dir'
+  jwtAudience: 'dir'
+  # Password strength should be between 4 and 31
+  passwordHashStrength: 10
