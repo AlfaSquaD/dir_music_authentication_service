@@ -1,6 +1,5 @@
 package com.dir.music.authentication_service.repository.user_repository;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 
