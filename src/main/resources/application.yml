@@ -2,7 +2,7 @@ spring:
   application:
     name: dir-authentication-service
   config:
-    import: optional:configserver:http://dir_config_server:8080, optional:configserver:http://localhost:8080
+    import: optional:configserver:http://{CONFIG_SERVER_USERNAME:config}:{CONFIG_SERVER_PASSWORD:config}@configserver:8080
 
   datasource:
     password: root
