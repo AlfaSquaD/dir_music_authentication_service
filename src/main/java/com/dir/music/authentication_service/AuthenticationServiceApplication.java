@@ -6,8 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@OpenAPIDefinition
 @EnableDiscoveryClient
+@OpenAPIDefinition
+
 public class AuthenticationServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(AuthenticationServiceApplication.class, args);
