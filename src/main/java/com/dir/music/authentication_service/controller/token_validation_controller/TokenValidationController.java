@@ -8,7 +8,6 @@ import com.dir.music.authentication_service.service.jwt_service.exception.TokenE
 import com.dir.music.authentication_service.service.jwt_service.exception.UnambiguousException;
 import com.dir.music.authentication_service.service.jwt_service.input.JWTServiceAccessTokenInput;
 import com.dir.music.authentication_service.service.jwt_service.output.JWTServiceAccessTokenClaimsOutput;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +28,7 @@ public class TokenValidationController {
 
     @PostMapping(path = "/get-claims", consumes = "application/json", produces = "application/json")
     public ResponseEntity<TokenValidationControllerOutput> getClaims(
-            @Valid @RequestBody TokenValidationControllerInput tokenValidationControllerInput
+            @RequestBody TokenValidationControllerInput tokenValidationControllerInput
     ) {
         final String accessToken = tokenValidationControllerInput.getAccessToken();
 
